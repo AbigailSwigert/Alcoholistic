@@ -1,11 +1,11 @@
 <?php
     if (isset($_POST["submit"])) {   
         $emailTo = "";
-        $subject = "Alcoholistic Contact Form";
+        $subject = "Alcoholistic Message";
         $body = "Name: " . $_POST["name"] . "\r\n";
         $body .= "Email: " . $_POST["email"] . "\r\n";
         $body .= "Message: " . $_POST["message"];
-        $headers = "From: ";
+        $headers = "From: Alcoholistic Contact Form";
         $success = mail($emailTo, $subject, $body, $headers);
     }
 

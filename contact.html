@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
         <meta http-equiv="x-ua-compatible" content="ie=edge">    
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 
         <style type="text/css">
            #form {
@@ -43,21 +44,22 @@
             </div>
         </nav>
         <div id="form">
-            <h1 style="font-family: 'Arial', Gadget, sans-serif;">Please fill out our contact form:</h1>
-            <form action="contact.php" method="POST">
+            <h1 style="font-family: 'Oswald';">Please fill out our contact form:</h1>
+            <small id="requiredFields" class="form-text text-muted">All fields are required</small>
+            <form action="contact.php" method="post">
                 <div class="form-group">
                     <label for="name">Your Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@email.com">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@email.com" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Let us know what this is about:</label>
-                    <textarea class="form-control" id="message" rows="5" name="message" placeholder="Your message here..."></textarea>
+                    <textarea class="form-control" id="message" rows="5" name="message" placeholder="Your message here..." required></textarea>
                 </div>
-                <button type="submit" id="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button id="submit" type="submit" name="submit" class="btn">Submit</button>
                 </div>
             </form>
         </div>
